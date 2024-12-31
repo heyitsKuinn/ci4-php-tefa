@@ -1,3 +1,12 @@
+    
+    <!-- Sidebar Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/') ?>">
+        <div class="sidebar-brand-icon">
+            <img src="<?= base_url('img/logo_ti.png') ?>" width="60" height="60" alt="Logo TI">
+        </div>
+        <div class="sidebar-brand-text mx-1" style="font-size: 25px;">TEFA IT</div>
+    </a>
+    
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
     

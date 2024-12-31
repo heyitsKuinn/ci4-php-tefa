@@ -109,9 +109,9 @@
             </div>
         </div>
     </div>
-
-
-
 </div>
+<!--Footer-->
+<?= $this->include('footer') ?>
+<!--End of Footer-->
 
 <?= $this->endSection() ?>
