@@ -1,12 +1,19 @@
 <?php
-
 namespace App\Controllers;
 
-class Home extends BaseController
+use CodeIgniter\Controller;
+
+class Home extends Controller
 {
-    public function index(): string
+    public function index()
     {
-        // Memastikan tampilan yang dimuat adalah 'index' atau file lainnya
-        return view('index'); // Gantilah 'index' dengan nama file yang sesuai
+        // Cek apakah session 'isLoggedIn' ada dan bernilai true
+        if (!session()->get('isLoggedIn')) {
+            // Jika belum login, arahkan ke halaman login
+            return redirect()->to('/login');
+        }
+
+        // Jika sudah login, tampilkan halaman dashboard
+        return view('index');  // Pastikan 'index.php' ada di folder 'app/Views/'
     }
 }

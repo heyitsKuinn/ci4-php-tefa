@@ -8,6 +8,9 @@ use CodeIgniter\Session\Handlers\FileHandler;
 
 class Session extends BaseConfig
 {
+
+    public $sessionSavePath = WRITEPATH . 'session'; // Lokasi penyimpanan session
+
     /**
      * --------------------------------------------------------------------------
      * Session Driver
