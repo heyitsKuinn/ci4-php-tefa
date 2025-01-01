@@ -1,19 +1,51 @@
+    
+    <!-- Sidebar Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/') ?>">
+        <div class="sidebar-brand-icon">
+            <img src="<?= base_url('img/logo_ti.png') ?>" width="60" height="60" alt="Logo TI">
+        </div>
+        <div class="sidebar-brand-text mx-1" style="font-size: 25px;">TEFA IT</div>
+    </a>
+    
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Main Feature
+    </div>
     
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item">
         <a class="nav-link" href="<?= base_url('/') ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            Dashboard
+        </a>
     </li>
     
-    <li class="nav-item active">
+    <!-- Nav Item - Device -->
+    <li class="nav-item">
         <a class="nav-link" href="<?= base_url('device') ?>">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Device</span></a>
+            <i class="bi bi-pc-display"></i>
+            Device</a>
     </li>
-    
+
+    <!-- Nav Item - Phonebook -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#phonebook-collapse"
+            aria-expanded="true" aria-controls="phonebook-collapse">
+            <i class="bi bi-journal-bookmark-fill"></i>
+            Phone Book
+        </a>
+        <div id="phonebook-collapse" class="collapse" aria-labelledby="phonebook-collapse" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= base_url('phonebook/contact') ?>">Contact</a>
+                <a class="collapse-item" href="<?= base_url('phonebook/group') ?>">Group</a>
+                <a class="collapse-item" href="<?= base_url('phonebook/wa-group') ?>">WA Group</a>
+            </div>
+      </div>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider">
     
@@ -107,7 +139,13 @@
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
-    
-   
-    
     </ul>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
