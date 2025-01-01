@@ -101,7 +101,7 @@
                                 <button class="btn btn-danger btn-sm">Disconnect</button>
                                 <button class="btn btn-secondary btn-sm">Order</button>
                                 <button class="btn btn-dark btn-sm">Token</button>
-                                <button class="btn btn-info btn-sm">Edit</button>
+                                <button class="btn btn-info btn-sm" onclick="openEditModal({id_device: <?= $row['id_device'] ?>, nama: '<?= $row['nama'] ?>', nomor_telepon: '<?= $row['nomor_telepon'] ?>', token: '<?= $row['token'] ?>'})">Edit</button>
                                 <button class="btn btn-danger btn-sm">Delete</button>
                             </td>
                         </tr>
@@ -143,6 +143,48 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="editDeviceModal" tabindex="-1" aria-labelledby="editDeviceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editDeviceModalLabel">Edit Device</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="<?= base_url('/device/edit') ?>" method="post">
+                <input type="hidden" id="edit_id_device" name="id_device">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="edit_nama" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="edit_nama" name="nama" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_nomor_telepon" class="form-label">Nomor Telepon</label>
+                        <input type="text" class="form-control" id="edit_nomor_telepon" name="nomor_telepon" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_token" class="form-label">Token</label>
+                        <input type="text" class="form-control" id="edit_token" name="token" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openEditModal(device) {
+        document.getElementById('edit_id_device').value = device.id_device;
+        document.getElementById('edit_nama').value = device.nama;
+        document.getElementById('edit_nomor_telepon').value = device.nomor_telepon;
+        document.getElementById('edit_token').value = device.token;
+        new bootstrap.Modal(document.getElementById('editDeviceModal')).show();
+    }
+</script>
 
 <!--Footer-->
 <?= $this->include('footer') ?>

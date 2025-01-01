@@ -48,4 +48,38 @@ class device extends BaseController
     
         return redirect()->back();
     }
+
+    public function editDevice()
+    {
+        $model = new M_device();
+
+        $id_device = $this->request->getPost('id_device');
+        $nama = $this->request->getPost('nama');
+        $nomorTelepon = $this->request->getPost('nomor_telepon');
+        $token = $this->request->getPost('token');
+
+        $data = [
+            'nama' => $nama,
+            'nomor_telepo' => $nomorTelepon,
+            'token' => $token
+        ];
+
+        if ($model->update($id_device, $data)) {
+            session()->setFlashdata('msg', '<div class="alert alert-primary alert-dismissible fade show mb-0" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <b>Device berhasil diperbarui.</b>
+            </div>');
+        } else {
+            session()->setFlashdata('msg', '<div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <b>Device gagal diperbarui.</b>
+            </div>');
+        }
+
+        return redirect()->back();
+    }
 }
