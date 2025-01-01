@@ -13,47 +13,39 @@ class device extends BaseController
         return view('device/device', $data); 
     }
     
-    public function save()
+    public function simpandevice()
     {
-        $deviceModel = new M_device();
+        $model = new M_device();
 
-        $validation = \Config\Services::validation();
-        $validation->setRules([
-            'nama' => 'required|min_length[3]|max_length[50]',
-            'nomor_telepo' => 'required|numeric',
-            'token' => 'required|max_length[255]',
-        ]);
+        $nama = $this->request->getPost('nama');
+        $nomorTelepon = $this->request->getPost('nomor_telepon');
+        $token = $this->request->getPost('token');
+    
+        $data = [
+            'nama' => $nama,
+            'nomor_telepon' => $nomorTelepon,
+            'token' => $token,
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+        // dd($data);
+    
 
-        if (!$validation->withRequest($this->request)->run()) {
-            return $this->response->setJSON([
-                'status' => 'error',
-                'errors' => $validation->getErrors()
-            ]);
+        if ($model->insert($data)) {
+            session()->setFlashdata('msg', '<div class="alert alert-primary alert-dismissible fade show mb-0" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <b>Device berhasil ditambahkan.</b>
+            </div>');
+        } else {
+            session()->setFlashdata('msg', '<div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <b>Device gagal ditambahkan.</b>
+            </div>');
         }
-
-        if ($this->request->getPost('action') === 'simpan') {
-            try {
-                $deviceModel->save([
-                    'nama' => $this->request->getPost('nama'),
-                    'nomor_telepo' => $this->request->getPost('nomor_telepo'),
-                    'token' => $this->request->getPost('token'),
-                ]);
-
-                return $this->response->setJSON([
-                    'status' => 'success',
-                    'message' => 'Device berhasil ditambahkan'
-                ]);
-            } catch (\Exception $e) {
-                return $this->response->setJSON([
-                    'status' => 'error',
-                    'message' => 'Failed to save device: ' . $e->getMessage()
-                ]);
-            }
-        }
-
-        return $this->response->setJSON([
-            'status' => 'error',
-            'message' => 'Invalid action'
-        ]);
+    
+        return redirect()->back();
     }
 }

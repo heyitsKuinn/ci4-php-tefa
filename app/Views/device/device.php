@@ -113,7 +113,6 @@
     </div>
 </div>
 
-<!-- Add Device Modal -->
 <div class="modal fade" id="addDeviceModal" tabindex="-1" aria-labelledby="addDeviceModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -121,15 +120,15 @@
                 <h5 class="modal-title" id="addDeviceModalLabel">Add Device</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form id="addDeviceForm">
+            <form action="<?= base_url('device/save') ?>" method="post">
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
                         <input type="text" class="form-control" id="nama" name="nama" required>
                     </div>
                     <div class="mb-3">
-                        <label for="nomor_telepo" class="form-label">Nomor Telepon</label>
-                        <input type="text" class="form-control" id="nomor_telepo" name="nomor_telepo" required>
+                        <label for="nomor_telepon" class="form-label">Nomor Telepon</label>
+                        <input type="text" class="form-control" id="nomor_telepon" name="nomor_telepon" required>
                     </div>
                     <div class="mb-3">
                         <label for="token" class="form-label">Token</label>
@@ -138,35 +137,13 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" name="action" value="simpan">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<script>
-    document.getElementById('addDeviceForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(this);
-
-        fetch('<?= base_url('device/save') ?>', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
-                alert(data.message);
-                location.reload(); // Reload the page to see the new device
-            } else {
-                alert('Error: ' + JSON.stringify(data.errors));
-            }
-        })
-        .catch(error => console.error('Error:', error));
-    });
-</script>
 <!--Footer-->
 <?= $this->include('footer') ?>
 <!--End of Footer-->

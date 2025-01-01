@@ -8,7 +8,7 @@ class M_device extends Model
 {
     protected $table = 'device';
     protected $primaryKey = 'id_device';
-    protected $allowedFields = ['id_device', 'nama', 'nomor_telepo', 'token'];
+    protected $allowedFields = ['id_device', 'nama', 'nomor_telepon', 'token'];
     protected $useSoftDeletes = true;
 
 

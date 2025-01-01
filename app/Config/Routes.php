@@ -11,4 +11,4 @@ $routes->get('/', 'Home::index');
 
 
 $routes->get('device', 'device::device'); 
-$routes->post('/device/save', 'device::save');
+$routes->post('/device/save', 'device::simpandevice');
