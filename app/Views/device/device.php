@@ -97,12 +97,19 @@
                                 <div>31 jan 2025</div>
                             </td>
                             <td>
+                                <div class=""></div>
                                 <button class="btn btn-primary btn-sm">Reconnect</button>
                                 <button class="btn btn-danger btn-sm">Disconnect</button>
                                 <button class="btn btn-secondary btn-sm">Order</button>
                                 <button class="btn btn-dark btn-sm">Token</button>
+
                                 <button class="btn btn-info btn-sm" onclick="openEditModal({id_device: <?= $row['id_device'] ?>, nama: '<?= $row['nama'] ?>', nomor_telepon: '<?= $row['nomor_telepon'] ?>', token: '<?= $row['token'] ?>'})">Edit</button>
-                                <button class="btn btn-danger btn-sm">Delete</button>
+
+                                <form action="<?= base_url('device/hapus') ?>" method="post" style="display:inline;">
+                                    <input type="hidden" name="id_device" value="<?= $row['id_device'] ?>">
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus perangkat ini?')">Delete</button>
+                                </form>
+
                             </td>
                         </tr>
                     </tbody>

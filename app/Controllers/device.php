@@ -82,4 +82,29 @@ class device extends BaseController
 
         return redirect()->back();
     }
+
+    public function hapusDevice()
+    {
+        $model = new M_device();
+
+        $id_device = $this->request->getPost('id_device');
+
+        if ($model->delete($id_device)) {
+            session()->setFlashdata('msg', '<div class="alert alert-primary alert-dismissible fade show mb-0" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <b>Device berhasil dihapus.</b>
+            </div>');
+        } else {
+            session()->setFlashdata('msg', '<div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <b>Device gagal dihapus.</b>
+            </div>');
+        }
+
+        return redirect()->back();
+    }
 }
