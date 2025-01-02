@@ -14,6 +14,6 @@ class Home extends Controller
         }
 
         // Jika sudah login, tampilkan halaman dashboard
-        return view('index');  // Pastikan 'index.php' ada di folder 'app/Views/'
+        return view('dashboard_admin'); 
     }
 }

@@ -1,11 +1,16 @@
-<?= $this->extend('layout') ?>
+<?= $this->extend('template/layout') ?>
+
+<?= $this->section('title') ?>
+    <title> Tefa IT - Device</title>
+<?= $this->endSection() ?>
+
 <?= $this->section('content') ?>
 
 <div class="container-fluid">
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        <h1 class="h3 mb-0 text-gray-800">Device</h1>
         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
             <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
         </a>
@@ -192,10 +197,4 @@
         new bootstrap.Modal(document.getElementById('editDeviceModal')).show();
     }
 </script>
-
-<!--Footer-->
-<?= $this->include('footer') ?>
-<!--End of Footer-->
-
-
 <?= $this->endSection() ?>
