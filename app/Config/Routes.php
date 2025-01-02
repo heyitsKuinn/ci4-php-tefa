@@ -26,3 +26,6 @@ $routes->get('device', 'device::device');
 $routes->post('/device/save', 'device::simpandevice');
 $routes->match(['get', 'post'],'/device/edit', 'device::editDevice');
 $routes->post('/device/hapus', 'device::hapusDevice');
+
+// Route Phonebook
+$routes->get('phonebook/contact', 'Phonebook::contact');
