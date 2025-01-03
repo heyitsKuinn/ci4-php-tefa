@@ -27,6 +27,16 @@
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="<?= base_url('img/logo_ti.png'); ?>">
 
+    <!-- dselect CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@jarstone/dselect/dist/css/dselect.css" rel="stylesheet">
+
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Select CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href=<?= base_url('vendor/dselect/style.css')?>>
+
 </head>
 
 <body id="page-top">
@@ -354,8 +364,20 @@
     <script src=<?= base_url('js/demo/chart-area-demo.js')?>></script>
     <script src=<?= base_url('js/demo/chart-pie-demo.js')?>></script>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- dselect JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@jarstone/dselect/dist/js/dselect.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Bootstrap Select JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src=<?= base_url('assets/js/all.js?ver=1.0.0')?>></script>
+    <script src=<?= base_url('vendor/dselect/dselect.js')?>></script>
 
 </body>
 

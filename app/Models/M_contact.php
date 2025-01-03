@@ -8,7 +8,8 @@ class M_contact extends Model
 {
     protected $table = 'contacts';
     protected $primaryKey = 'id_kontak';
-    protected $allowedFields = ['id_kontak', 'nama', 'nomor_telp', 'group', 'variable'];
+    protected $allowedFields = ['id_kontak', 'nama', 'no_telp', 'grup', 'variable', 'country', 'created_at'];
+
     //protected $useSoftDeletes = true;
 
 

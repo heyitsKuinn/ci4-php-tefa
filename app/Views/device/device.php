@@ -75,8 +75,11 @@
     <!-- Devices Table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Devices</h6>
-            <button type="button" class="btn btn-dark btn-sm float-right" data-bs-toggle="modal" data-bs-target="#addDeviceModal">+ Add Device</button>
+            <button type="button" class="btn btn-success btn-icon-split btn-sm" data-bs-toggle="modal" data-bs-target="#addDeviceModal">
+                <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Tambah Device</span></button>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -108,11 +111,12 @@
                                 <button class="btn btn-secondary btn-sm">Order</button>
                                 <button class="btn btn-dark btn-sm">Token</button>
 
-                                <button class="btn btn-info btn-sm" onclick="openEditModal({id_device: <?= $row['id_device'] ?>, nama: '<?= $row['nama'] ?>', nomor_telepon: '<?= $row['nomor_telepon'] ?>', token: '<?= $row['token'] ?>'})">Edit</button>
-
+                                <button class="btn btn-warning btn-sm" onclick="openEditModal({id_device: <?= $row['id_device'] ?>, nama: '<?= $row['nama'] ?>', nomor_telepon: '<?= $row['nomor_telepon'] ?>', token: '<?= $row['token'] ?>'})">
+                                    <i class="fas fa-edit" style="margin-right: 8px;"></i>Edit</button>
                                 <form action="<?= base_url('device/hapus') ?>" method="post" style="display:inline;">
                                     <input type="hidden" name="id_device" value="<?= $row['id_device'] ?>">
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus perangkat ini?')">Delete</button>
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus perangkat ini?')">
+                                        <i class="fas fa-trash" style="margin-right: 8px;"></i>Delete</button>
                                 </form>
 
                             </td>
