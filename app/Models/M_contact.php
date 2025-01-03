@@ -8,9 +8,14 @@ class M_contact extends Model
 {
     protected $table = 'contacts';
     protected $primaryKey = 'id_kontak';
-    protected $allowedFields = ['id_kontak', 'nama', 'no_telp', 'grup', 'variable', 'country', 'created_at'];
+    protected $allowedFields = ['id_kontak', 'nama', 'no_telp', 'id_group', 'variable', 'country', 'created_at', 'modified_at', 'deleted_at'];
+    protected $useSoftDeletes = true;
 
-    //protected $useSoftDeletes = true;
-
+    public function getContactsWithGroups()
+    {
+        return $this->select('contacts.*, groups.nama_grup')
+                    ->join('groups', 'contacts.id_group = groups.id_group', 'left')
+                    ->findAll();
+    }
 
 }

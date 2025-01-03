@@ -237,14 +237,17 @@
         </div>
         <div class="mb-4">
             <label for="group" class="form-label">Group</label>
-            <select name="grup[]" id="group" class="selectpicker form-control" multiple data-live-search="true">
-                <option value="1">Ambatukam</option>
-                <option value="2">Ambatukam 2</option>
+            <select name="groups[]" id="group" class="selectpicker form-control" multiple data-live-search="true">
+                <?php if (!empty($groups)): ?>
+                    <?php foreach ($groups as $group): ?>
+                        <option value="<?= $group['id_group']; ?>"><?= $group['nama_grup']; ?></option>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </select>
         </div>
 
-        <button type="submit" class="btn btn-primary">Simpan Data</button>
-        <a href="contacts.php" class="btn btn-danger">Batal</a>
+        <button type="submit" class="btn btn-primary btn-sm">Simpan Data</button>
+        <a href="contacts.php" class="btn btn-danger btn-sm">Batal</a>
     </form>
 </div>
 

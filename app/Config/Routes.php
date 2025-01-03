@@ -31,3 +31,5 @@ $routes->post('/device/hapus', 'device::hapusDevice');
 $routes->get('phonebook/contact', 'Phonebook::contact');
 $routes->get('phonebook/tambah_contact', 'Phonebook::tambah_contact');
 $routes->post('phonebook/tambah_contact', 'Phonebook::tambah_contact');
+$routes->post('phonebook/edit_contact/(:num)', 'Phonebook::edit_contact/$1');
+$routes->post('phonebook/hapus_contact', 'Phonebook::hapus_contact');
