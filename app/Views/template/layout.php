@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
     <link rel="stylesheet" href=<?= base_url('vendor/dselect/style.css')?>>
 
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+    
+
 </head>
 
 <body id="page-top">
@@ -378,6 +381,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src=<?= base_url('assets/js/all.js?ver=1.0.0')?>></script>
     <script src=<?= base_url('vendor/dselect/dselect.js')?>></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </body>
 

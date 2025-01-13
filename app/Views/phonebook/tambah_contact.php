@@ -247,7 +247,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary btn-sm">Simpan Data</button>
-        <a href="contacts.php" class="btn btn-danger btn-sm">Batal</a>
+        <a href="/phonebook/contact" class="btn btn-danger btn-sm">Batal</a>
     </form>
 </div>
 

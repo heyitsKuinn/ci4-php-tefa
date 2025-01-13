@@ -59,8 +59,7 @@
                                                         id_kontak: <?= $row['id_kontak'] ?>, 
                                                         nama: '<?= $row['nama'] ?>', 
                                                         no_telp: '<?= $row['no_telp'] ?>', 
-                                                        variable: '<?= $row['variable'] ?>', 
-                                                        id_group: '<?= $row['id_group'] ?>'
+                                                        variable: '<?= $row['variable'] ?>'
                                                     })">
                                                         <i class="fas fa-edit"></i> Edit
                                                     </button>
