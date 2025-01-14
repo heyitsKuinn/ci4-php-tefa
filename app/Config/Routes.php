@@ -40,3 +40,11 @@ $routes->get('phonebook/tambah_group', 'Phonebook::tambah_group');
 $routes->post('phonebook/tambah_group', 'Phonebook::tambah_group');
 $routes->post('phonebook/edit_group', 'Phonebook::edit_group/$1');
 $routes->post('phonebook/hapus_group', 'Phonebook::hapus_group');
+
+$routes->get('phonebook/wa-group', 'Phonebook::wa_group');
+
+// Route Message History
+$routes->get('history', 'MessageHistory::history');
+
+// Route Send
+$routes->get('send', 'SendController::send');

@@ -295,4 +295,10 @@ class Phonebook extends BaseController
 
         return redirect()->back();
     }
+
+    public function wa_group()
+    {
+        return view('phonebook/wa_group');
+    }
+    
 } 

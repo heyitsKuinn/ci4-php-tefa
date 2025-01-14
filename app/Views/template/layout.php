@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,17 +10,14 @@
 
     <?= $this->renderSection('title'); ?>
 
-    <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href=<?= base_url('vendor/fontawesome-free/css/all.min.css');?> rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this template -->
     <link href=<?= base_url('css/sb-admin-2.min.css');?> rel="stylesheet">
 
     <!-- Favicon -->
@@ -35,12 +31,9 @@
 
     <!-- Bootstrap Select CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href=<?= base_url('vendor/dselect/style.css')?>>
-
-    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
-    
 
 </head>
+
 
 <body id="page-top">
 
@@ -339,34 +332,19 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src=<?= base_url('vendor/jquery/jquery.min.js')?>></script>
-    <script src=<?= base_url('vendor/bootstrap/js/bootstrap.bundle.min.js')?>></script>
-    <script src="<?= base_url('vendor/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
-
-    <!-- Notyf -->
-    <script src="<?= base_url('vendor/notyf/notyf.min.js') ?>"></script>
-
-    <!-- Volt JS -->
-    <script src="<?= base_url('assets/js/volt.js') ?>"></script>
+    <script src="<?= base_url('vendor/jquery/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
     <!-- Custom JS -->
-    <script src="<?= base_url('assets/js/domain.js') ?>"></script>
-    <script src="<?= base_url('assets/js/all.js?ver=1.0.0') ?>"></script>
-    <script src="<?= base_url('assets/js/delete.js') ?>"></script>
+    <script src="<?= base_url('vendor/fontawesome-free/js/all.js') ?>"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src=<?= base_url('vendor/jquery-easing/jquery.easing.min.js')?>></script>
+    <!-- Core plugin JavaScript -->
+    <script src="<?= base_url('vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src=<?= base_url('js/sb-admin-2.min.js')?>></script>
+    <!-- Custom scripts for all pages -->
+    <script src="<?= base_url('js/sb-admin-2.min.js') ?>"></script>
 
-    <!-- Page level plugins -->
-    <script src=<?= base_url('vendor/chart.js/Chart.min.js')?>></script>
-
-    <!-- Page level custom scripts -->
-    <script src=<?= base_url('js/demo/chart-area-demo.js')?>></script>
-    <script src=<?= base_url('js/demo/chart-pie-demo.js')?>></script>
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- dselect JS -->
@@ -377,11 +355,10 @@
 
     <!-- Bootstrap Select JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src=<?= base_url('assets/js/all.js?ver=1.0.0')?>></script>
-    <script src=<?= base_url('vendor/dselect/dselect.js')?>></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="<?= base_url('vendor/jquery/jquery.min.js') ?>"></script>
+
 
 
 </body>
