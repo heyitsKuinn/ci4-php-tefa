@@ -27,9 +27,17 @@ class LoginController extends Controller
             // Jika login berhasil, set session
             session()->set('isLoggedIn', true);
             session()->set('username', $user['username']);
+            session()->set('level', $user['level']);  // Simpan level pengguna di session
 
-            // Redirect ke halaman dashboard
-            return redirect()->to('/dashboard');  // Halaman dashboard setelah login
+            // Redirect berdasarkan level pengguna
+            switch ($user['level']) {
+                case 'admin':
+                    return redirect()->to('/admin/dashboard');  // Halaman admin
+                case 'public':
+                    return redirect()->to('/dashboard');  // Halaman public
+                default:
+                    return redirect()->to('/dashboard');  // Halaman default
+            }
         } else {
             // Jika login gagal, beri pesan error
             session()->setFlashdata('loginError', 'Username atau Password salah.');

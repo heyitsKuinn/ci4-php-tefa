@@ -21,6 +21,16 @@ $routes->get('/dashboard', 'Home::index');  // Halaman dashboard setelah login
 $routes->get('register', 'Auth::register');  // Untuk menampilkan form register
 $routes->post('register', 'Auth::register'); // Untuk memproses form register
 
+// Route untuk halaman forgot passwordF
+$routes->get('forgot-password', 'Auth::forgotPassword'); // Menampilkan form forgot password
+$routes->post('forgot-password', 'Auth::forgotPassword'); // Mengirim email reset password
+
+// Route untuk halaman reset password
+$routes->get('reset-password/(:any)', 'Auth::resetPassword/$1'); // Menampilkan form reset password berdasarkan token
+$routes->get('/verify-code', 'Auth::verifyCode');
+$routes->post('/verify-code', 'Auth::verifyCode');
+
+
 
 $routes->get('device', 'device::device'); 
 $routes->post('/device/save', 'device::simpandevice');

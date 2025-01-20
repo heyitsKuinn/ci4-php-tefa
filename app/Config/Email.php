@@ -6,116 +6,61 @@ use CodeIgniter\Config\BaseConfig;
 
 class Email extends BaseConfig
 {
-    public string $fromEmail  = '';
-    public string $fromName   = '';
-    public string $recipients = '';
+    // Email Pengirim (from)
+    public string $fromEmail  = '001tefait@gmail.com';  // Ganti dengan alamat email Anda
+    public string $fromName   = 'TEFA IT';  // Nama pengirim, misalnya nama aplikasi
+    public string $recipients = '';  // Bisa kosong jika tidak ada penerima default
 
-    /**
-     * The "user agent"
-     */
+    // User Agent
     public string $userAgent = 'CodeIgniter';
 
-    /**
-     * The mail sending protocol: mail, sendmail, smtp
-     */
-    public string $protocol = 'mail';
+    // Protokol Pengiriman Email
+    public string $protocol = 'smtp';  // Ubah ke 'smtp' untuk pengiriman via SMTP
 
-    /**
-     * The server path to Sendmail.
-     */
+    // Lokasi Sendmail (biarkan default jika tidak menggunakan sendmail)
     public string $mailPath = '/usr/sbin/sendmail';
 
-    /**
-     * SMTP Server Hostname
-     */
-    public string $SMTPHost = '';
-
-    /**
-     * SMTP Username
-     */
-    public string $SMTPUser = '';
-
-    /**
-     * SMTP Password
-     */
-    public string $SMTPPass = '';
-
-    /**
-     * SMTP Port
-     */
-    public int $SMTPPort = 25;
-
-    /**
-     * SMTP Timeout (in seconds)
-     */
+    // Pengaturan SMTP Server
+    public string $SMTPHost = 'smtp.gmail.com';  // Host SMTP Gmail
+    public string $SMTPUser = '001tefait@gmail.com';  // Alamat email Anda untuk autentikasi
+    public string $SMTPPass = 'asdqwe123@#$';  // Password atau App Password jika menggunakan 2FA
+    public int $SMTPPort = 587;  // Port SMTP untuk Gmail (gunakan 465 untuk SSL)
+    
+    // Timeout SMTP (dalam detik)
     public int $SMTPTimeout = 5;
 
-    /**
-     * Enable persistent SMTP connections
-     */
+    // Mengaktifkan koneksi SMTP yang persisten
     public bool $SMTPKeepAlive = false;
 
-    /**
-     * SMTP Encryption.
-     *
-     * @var string '', 'tls' or 'ssl'. 'tls' will issue a STARTTLS command
-     *             to the server. 'ssl' means implicit SSL. Connection on port
-     *             465 should set this to ''.
-     */
+    // Enkripsi SMTP: tls untuk Gmail
     public string $SMTPCrypto = 'tls';
 
-    /**
-     * Enable word-wrap
-     */
+    // Enable word-wrap pada email
     public bool $wordWrap = true;
 
-    /**
-     * Character count to wrap at
-     */
+    // Jumlah karakter untuk word wrap
     public int $wrapChars = 76;
 
-    /**
-     * Type of mail, either 'text' or 'html'
-     */
-    public string $mailType = 'text';
+    // Jenis email: 'text' atau 'html'
+    public string $mailType = 'html';  // Mengirimkan email dalam format HTML
 
-    /**
-     * Character set (utf-8, iso-8859-1, etc.)
-     */
+    // Karakter set untuk email
     public string $charset = 'UTF-8';
 
-    /**
-     * Whether to validate the email address
-     */
+    // Validasi alamat email
     public bool $validate = false;
 
-    /**
-     * Email Priority. 1 = highest. 5 = lowest. 3 = normal
-     */
+    // Prioritas email
     public int $priority = 3;
 
-    /**
-     * Newline character. (Use “\r\n” to comply with RFC 822)
-     */
+    // Karakter baru untuk email (RFC 822)
     public string $CRLF = "\r\n";
-
-    /**
-     * Newline character. (Use “\r\n” to comply with RFC 822)
-     */
     public string $newline = "\r\n";
 
-    /**
-     * Enable BCC Batch Mode.
-     */
+    // Mengaktifkan BCC Batch Mode
     public bool $BCCBatchMode = false;
-
-    /**
-     * Number of emails in each BCC batch
-     */
     public int $BCCBatchSize = 200;
 
-    /**
-     * Enable notify message from server
-     */
+    // Mengaktifkan pesan pemberitahuan dari server
     public bool $DSN = false;
 }
