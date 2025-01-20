@@ -21,7 +21,7 @@
     <link href=<?= base_url('css/sb-admin-2.min.css');?> rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="<?= base_url('img/logo_ti.png'); ?>">
+    <link rel="icon" type="image/jpeg" href="<?= base_url('img/logo_cpath.png'); ?>">
 
     <!-- dselect CSS -->
     <link href="https://cdn.jsdelivr.net/npm/@jarstone/dselect/dist/css/dselect.css" rel="stylesheet">
@@ -41,14 +41,14 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/dashboard') ?>">
                 <div class="sidebar-brand-icon">
-                    <img src="<?= base_url('img/logo_ti.png') ?>" width="60" height="60" alt="Logo TI">
+                    <img src="<?= base_url('img/logo_cpath.png') ?>" width="60" height="60" alt="Logo CPath API">
                 </div>
-                <div class="sidebar-brand-text mx-1" style="font-size: 25px;">TEFA IT</div>
+                <div class="sidebar-brand-text mx-1" style="font-size: 25px;">CPath</div>
             </a>
 
             <!-- Sidebar Menu -->
